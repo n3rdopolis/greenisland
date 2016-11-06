@@ -31,7 +31,11 @@
 #define OPENGLCOMPOSITOR_H
 
 #include <QtCore/QTimer>
+#if QT_VERSION >= 0x050800
+#include <QtGui/qopengltextureblitter_p.h>
+#else
 #include <QtGui/private/qopengltextureblitter_p.h>
+#endif
 
 #include <GreenIsland/platform/greenislandplatform_export.h>
 
